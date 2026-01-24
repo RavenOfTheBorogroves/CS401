@@ -67,14 +67,14 @@ int main() {
     cout << "Input your text: ";
     getline (cin, userInput);
     int length = userInput.size();
-    string success = " is balanced";
-    string failure = " is not balanced";
+    string success = " are balanced";
+    string failure = " are not balanced";
     myStack st(12);
     
     //declaring the char i am comparing agianst 
     for (int i = 0; i < length; i++) {
         char focus = userInput[i];
-        if (focus == '(' || focus =='['){
+        if (focus == '(' || focus =='['||focus == '{'){
             st.push(focus);
 
         } else if (focus == ']' ){
@@ -89,10 +89,16 @@ int main() {
                 st.push(compare);
             }
 
-        }        
+        } else if (focus == '}' ){
+            char compare = st.pop();
+            if ((compare != '{')){
+                st.push(compare);
+            }
+
+        }           
 
     }
-    cout << userInput << (st.isEmpty() ? success : failure) <<endl;
+    cout << "Parentheses" << (st.isEmpty() ? success : failure) <<endl;
     
 
 
