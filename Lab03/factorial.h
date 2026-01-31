@@ -2,7 +2,7 @@
 
 #define FACTORIAL_H
 
-unsigned int factorialRecursive(unsigned int n);
-unsigned int factorialIterative(unsigned int N);
+extern unsigned int factorialRecursive(unsigned int n);
+extern unsigned int factorialIterative(unsigned int N);
 
 #endif
