@@ -135,3 +135,9 @@ class soccerNet(Soccer):
     def details(self):
         print(self.name, "is a ", self.category, " item") #add more 
 
+#add user interaction
+# ill create functions to check if user input is correct ie if int imput needed the input is an int 
+# create functions for int string float also 
+# found a thing about rounding float to decimals 
+# 'Your Meal Price is %.2f' %  mealPrice 
+#will use this for price 
