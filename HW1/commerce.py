@@ -141,15 +141,3 @@ class soccerNet(Soccer):
 # found a thing about rounding float to decimals 
 # 'Your Meal Price is %.2f' %  mealPrice 
 #will use this for price 
-
-
-
-
-
-
-
-
-# sources:
-# https://www.geeksforgeeks.org/python/python-oops-concepts/
-# https://www.geeksforgeeks.org/python/inheritance-in-python/
-# https://stackoverflow.com/questions/3221654/specifying-number-of-decimal-places-in-python
