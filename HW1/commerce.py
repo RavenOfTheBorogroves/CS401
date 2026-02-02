@@ -79,3 +79,59 @@ class Table(TableTennis):
 
     def details(self):
         print(self.name, "is a ", self.category, " item for ", self.Kind) #add more info
+
+class OutdoorSport(Product):
+    def __init__(self, name, price, avalible):
+        super().__init__(price, name, avalible)   # Call parent constructor
+        self.category = "Outdoor Sports"
+
+    def details(self):
+        print(self.name, "is a ", self.category, " item")
+
+class Camping(OutdoorSport):
+    def __init__(self, name, price, avalible):
+        super().__init__(price, name, avalible)   # Call parent constructor
+
+    def details(self):
+        print(self.name, "is a ", self.category, " item")
+
+class Tent(Camping):
+    def __init__(self, name, price, avalible,size, durability, weather):
+        super().__init__(price, name, avalible)   # Call parent constructor
+        self.size = size
+        self.durability =durability
+        self.weather = weather 
+
+    def details(self):
+        print(self.name, "is a ", self.category, " item")
+
+class Soccer(OutdoorSport):
+    def __init__(self, name, price, avalible, players):
+        super().__init__(price, name, avalible)   # Call parent constructor
+        self.players =players
+        self.discount = .05
+        self.totalcost = self.price
+    
+    def discount(self):
+        self.totalcost = self.price - (self.players * self.discount * self.price)
+
+    def details(self):
+        print(self.name, "is a ", self.category, " item")
+
+
+class soccerBall(Soccer):
+    def __init__(self, name, price, avalible, players,material):
+        super().__init__(price, name, avalible,players)   # Call parent constructor
+        self.material =material
+
+    def details(self):
+        print(self.name, "is a ", self.category, " item") #add more 
+
+class soccerNet(Soccer):
+    def __init__(self, name, price, avalible, players, size):
+        super().__init__(price, name, avalible,players)   # Call parent constructor
+        self.size =size
+
+    def details(self):
+        print(self.name, "is a ", self.category, " item") #add more 
+
